@@ -65,14 +65,14 @@ class ScoreboardAPI extends PluginBase {
     public function addLine(Player $player, string $line, int $score) {
         $pkline = new ScorePacketEntry();
         $pkline->objectiveName = "objective";
-		    $pkline->type = ScorePacketEntry::TYPE_FAKE_PLAYER;
-		    $pkline->customName = $line;
-		    $pkline->score = $score;
-		    $pkline->scoreboardId = $score;
-		    $packet = new SetScorePacket();
-		    $packet->type = SetScorePacket::TYPE_CHANGE;
-		    $packet->entries[] = $pkline;
-		    $player->getNetworkSession()->sendDataPacket($packet);
+	$pkline->type = ScorePacketEntry::TYPE_FAKE_PLAYER;
+	$pkline->customName = $line;
+	$pkline->score = $score;
+        $pkline->scoreboardId = $score;
+        $packet = new SetScorePacket();
+	$packet->type = SetScorePacket::TYPE_CHANGE;
+	$packet->entries[] = $pkline;
+	$player->getNetworkSession()->sendDataPacket($packet);
     }
 
     /**
