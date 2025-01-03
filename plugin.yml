@@ -1,0 +1,6 @@
+name: ScoreboardAPI
+version: 1.0.0
+author: Natha Dev
+description: Una API para crear y manipular scoreboards en PocketMine 5.0.0
+api: 5.0.0
+main: natha\scoreboards\ScoreboardAPI
